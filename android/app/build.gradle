@@ -1,0 +1,56 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.firebase_notification"
+    compileSdkVersion = 34 // Specify the latest SDK version (example: 33)
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        // Unique Application ID for the project
+        applicationId = "com.example.myapp"
+        minSdkVersion 21  // Use a minimum SDK version (example: 21)
+        targetSdkVersion 34  // Specify the latest target SDK version (example: 33)
+        versionCode 1  // You can change this as per your versioning needs
+        versionName "1.0" // Define your version name
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+flutter {
+    source = "../.." // This path points to your Flutter module
+}
+
+dependencies {
+    // Add Firebase Analytics if needed or other Firebase plugins
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Add any other dependencies here
+}
+
+// Ensure the Google services plugin is applied after the dependencies block
+apply plugin: 'com.google.gms.google-services'

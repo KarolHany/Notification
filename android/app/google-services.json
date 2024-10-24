@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "200679367192",
+    "project_id": "puchfirebasenotification",
+    "storage_bucket": "puchfirebasenotification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200679367192:android:1095d4994f6d47e1e8996d",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJlePRmb0k6UUpACp5BqlCC6KL3c9X7dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
